@@ -76,7 +76,7 @@ console.log(child, 'child')
 此时如果按照我们基于 JavaScript 的理解的话，我们为 child 实例上添加了一个 name 属性，实质上是和原型上的 parent 中的同名操作符没有任何关系对吧。  
 最开始我也是天真的这样以为的，当我们进行 `child.name = '19Qingfeng'` 赋值时，应该仅仅为 child 实例上添加一个 name 为 19Qingfeng 的属性就可以了。  
 可是结果并不是这样  
-![屏蔽](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2098112554904403a1bd464a9f4eeabd~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?)  
+![屏蔽](https://note.youdao.com/yws/api/personal/file/WEBc07227ad3b9dd70d8e628324a3eaafe4?method=download&shareKey=dcb7af32618acde118fc337acee8cfc1)  
 **我们明明是在实例 child 上进行了赋值，可是为什么 child 上并没有出现所谓的 name 属性，而是拥有了一个名为 \_name 的 19Qinfeng ？**  
 其实这正是我想和大家重点强调的的所谓 Getter/Setter 产生的屏蔽效应：  
 比如上边我们为 child 的 name 属性进行赋值操作时完整过程如下：
